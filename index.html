@@ -116,6 +116,16 @@
             <p id="sapaan"></p>
         </div>
 
+        <div>
+            <h2>Misterius</h2>
+
+            <p>Klik tombol di bawah untuk membuka sesuatu.</p>
+
+            <button onclick="bukaYoutube()">
+             Buka
+            </button>
+        </div>
+
     </div>
 
     <footer>
@@ -133,6 +143,9 @@
 
             document.getElementById("sapaan").innerHTML =
             "Halo, " + nama + "!";
+        }
+        function bukaYoutube(){
+            window.open("https://www.youtube.com/watch?v=Aq5WXmQQooo", "_blank");
         }
     </script>
 
