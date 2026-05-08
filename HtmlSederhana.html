@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        header{
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav{
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container{
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button{
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+
+        footer{
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        #hasil{
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Website Sederhana</h1>
+        <p>Belajar HTML, CSS, dan JavaScript</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Tentang Website</h2>
+            <p>
+                Ini adalah contoh website sederhana dengan tampilan lebih modern.
+                Di dalamnya terdapat HTML, CSS, dan JavaScript dasar.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Klik Tombol</h2>
+            <p>Tekan tombol di bawah untuk menampilkan pesan.</p>
+
+            <button onclick="tampilPesan()">
+                Klik Saya
+            </button>
+
+            <div id="hasil"></div>
+        </div>
+
+        <div class="card">
+            <h2>Form Sederhana</h2>
+
+            <input type="text" id="nama" placeholder="Masukkan nama">
+            <button onclick="sapaUser()">Kirim</button>
+
+            <p id="sapaan"></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Website HTML Sederhana</p>
+    </footer>
+
+    <script>
+        function tampilPesan(){
+            document.getElementById("hasil").innerHTML =
+            "Tombol berhasil ditekan!";
+        }
+
+        function sapaUser(){
+            let nama = document.getElementById("nama").value;
+
+            document.getElementById("sapaan").innerHTML =
+            "Halo, " + nama + "!";
+        }
+    </script>
+
+</body>
+</html>
